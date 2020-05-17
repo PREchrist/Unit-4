@@ -68,4 +68,4 @@ for (let i = 0; i < N; i++) {
 
 print(defibs[nearestPoint][1]);
 ```
-![defribillator](Defribillator.png)
+![defribillator](Defribillators.png)
