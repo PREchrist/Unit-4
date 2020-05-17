@@ -35,6 +35,7 @@ Line 3: The number N of defibrillators located in the streets of Montpellier
 N next lines: a description of each defibrillator
 
 
+```.js
 const longtitudeA = parseFloat(readline().replace(',', '.'));
 const latitudeA = parseFloat(readline().replace(',', '.'));
 const N = parseInt(readline());
@@ -66,3 +67,4 @@ for (let i = 0; i < N; i++) {
 }
 
 print(defibs[nearestPoint][1]);
+```
