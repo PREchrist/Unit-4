@@ -24,4 +24,4 @@ print(
         .join(' ')
 );
 ```
-![ChuckNorris](ChuckNorris.png)
+ç
