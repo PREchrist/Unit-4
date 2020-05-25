@@ -1,0 +1,119 @@
+##Question 1: Pig Latin – Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Read Wikipedia for more information on rules.
+
+You need to research: How to get text from a input control in Javascript
+
+Example UI in the website:
+
+Output: Show the output in the console and in the web site after the word “The Pig Latin is XXXXX
+
+```.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pig Latin Translator</title>
+
+<script>
+
+function pigLatin(){
+    var input = document.getElementById("Input").value
+    var translation = input.slice(1) + input.slice(0, 1) + 'ay'
+    document.getElementById("TranslateText").innerHTML = translation
+    console.log(translation)
+}
+function selectedName(text) {
+    document.getElementById("Input").value = text
+}
+</script>
+</head>
+<body>
+    <h1>Pig Latin Translator</h1>
+
+    <p>Write down a word:</p>
+    <input type="text" id="Input" value="Original value">
+    <button type="button" onclick="pigLatin()">Click here!</button>
+    <p>This word's pig latin is: </p>
+    <p id="TranslateText"></p>
+
+     <div class="cadre">
+        <h2 id="titre">Try with these famous people's name</h2>
+    <ul class="wordlists">
+        <li onclick=selectedName("precieux")>precieux</li>
+        <li onclick=selectedName("christ")>christ</li>
+        <li onclick=selectedName("alex")>alex</li>
+        <li onclick=selectedName("chinomso")>chinomso</li>
+        <li onclick=selectedName("lydia")>lydia</li>
+        <li onclick=selectedName("kelven")>kelven</li>
+        <li onclick=selectedName("ruben")>ruben</li>
+        <li onclick=selectedName("onadja")>onadja</li>
+        <li onclick=selectedName("mayaoli")>mayaoli</li>
+        <li onclick=selectedName("amanda")>amanda</li>
+        <li onclick=selectedName("yukisa")>yukisa</li>
+        <li onclick=selectedName("david")>david</li>
+        <li onclick=selectedName("obama")>obama</li>
+        <li onclick=selectedName("biden")>biden</li>
+        <li onclick=selectedName("kobayashi")>kobayashi</li>
+        <li onclick=selectedName("hasham")>hasham</li>
+        <li onclick=selectedName("cary")>cary</li>
+        <li onclick=selectedName("liliane")>liliane</li>
+        <li onclick=selectedName("brice")>brice</li>
+        <li onclick=selectedName("knight")>knight</li>
+        <li onclick=selectedName("ricardo")>ricardo</li>
+
+
+
+    </ul>
+    </div>
+
+     </div>
+    <footer>
+        Created by <a href="https://www.instagram.com/christ_precieux_11.0/">PreChrist le Précieux</a>
+        <span class="nt">This is my first step in javascript with this huge program</span>
+    </footer>
+
+
+</body>
+<style>
+    body{
+        background-color: deepskyblue;
+    }
+    .cadre{
+        border: 5px dashed white;
+        width: 400px;
+    }
+    .wordlists {
+            list-style-type:none;
+    }
+    .wordlists li {
+            display:inline-block;
+              padding:4px 8px;
+              margin:5px 5px;
+              background-color:white;
+              border-radius:5px;
+              cursor:pointer;
+              border:1px solid whitesmoke;
+    }
+
+    .wordlists li:hover {
+          background-color:deepskyblue;
+    }
+
+    .wordlists li:active {
+          -webkit-transform:scale(1.05);
+    }
+
+    footer {font-size:60px;color:white;text-align:center;font-family: fantasy}
+    footer a {color:white;}
+
+    footer .nt {display:block;font-size:12px;}
+
+    #titre{
+        padding-left: 7px;
+    }
+
+
+
+
+</style>
+</html>
+```
