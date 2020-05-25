@@ -116,114 +116,100 @@ function selectedName(text) {
 
 </style>
 </html>
-```
+
+
+Question 3: Check if Palindrome – Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like “racecar”
+
+Output: in the website and in the console
+
+```.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pig Latin Translator</title>
-
+    <title>Palindopme Checker</title>
+    
 <script>
+    
+function PalindromeCheck() {
+    var input = document.getElementById("input").value.toLowerCase()
 
-function pigLatin(){
-    var input = document.getElementById("Input").value
-    var translation = input.slice(1) + input.slice(0, 1) + 'ay'
-    document.getElementById("TranslateText").innerHTML = translation
-    console.log(translation)
-}
-function selectedName(text) {
-    document.getElementById("Input").value = text
-}
-</script>
+    var reversedString = input.split("").reverse().join("")
+
+    if (input == reversedString){
+        document.getElementById("reponse").innerHTML = input + " is a palindrome"
+    } else {
+        document.getElementById("reponse").innerHTML = input + "  is NOT a palindrome"
+    }
+
+}    
+</script>    
+
 </head>
 <body>
-    <h1>Pig Latin Translator</h1>
+    <h1>Palindrome Checker</h1>
 
-    <p>Write down a word:</p>
-    <input type="text" id="Input" value="Original value">
-    <button type="button" onclick="pigLatin()">Click here!</button>
-    <p>This word's pig latin is: </p>
-    <p id="TranslateText"></p>
+    <p>Insert your word down!</p>
+    <input type="text" id="input">
+    <button type="button" onclick="PalindromeCheck()">Check it here!</button>
 
-     <div class="cadre">
-        <h2 id="titre">Try with these famous people's name</h2>
-    <ul class="wordlists">
-        <li onclick=selectedName("precieux")>precieux</li>
-        <li onclick=selectedName("christ")>christ</li>
-        <li onclick=selectedName("alex")>alex</li>
-        <li onclick=selectedName("chinomso")>chinomso</li>
-        <li onclick=selectedName("lydia")>lydia</li>
-        <li onclick=selectedName("kelven")>kelven</li>
-        <li onclick=selectedName("ruben")>ruben</li>
-        <li onclick=selectedName("onadja")>onadja</li>
-        <li onclick=selectedName("mayaoli")>mayaoli</li>
-        <li onclick=selectedName("amanda")>amanda</li>
-        <li onclick=selectedName("yukisa")>yukisa</li>
-        <li onclick=selectedName("david")>david</li>
-        <li onclick=selectedName("obama")>obama</li>
-        <li onclick=selectedName("biden")>biden</li>
-        <li onclick=selectedName("kobayashi")>kobayashi</li>
-        <li onclick=selectedName("hasham")>hasham</li>
-        <li onclick=selectedName("cary")>cary</li>
-        <li onclick=selectedName("liliane")>liliane</li>
-        <li onclick=selectedName("brice")>brice</li>
-        <li onclick=selectedName("knight")>knight</li>
-        <li onclick=selectedName("ricardo")>ricardo</li>
-
-
-
-    </ul>
-    </div>
-
-     </div>
-    <footer>
-        Created by <a href="https://www.instagram.com/christ_precieux_11.0/">PreChrist le Précieux</a>
-        <span class="nt">This is my first step in javascript with this huge program</span>
-    </footer>
-
+    <h2 id="reponse">The text is goin' to pop up...</h2>
 
 </body>
-<style>
-    body{
-        background-color: deepskyblue;
-    }
-    .cadre{
-        border: 5px dashed white;
-        width: 400px;
-    }
-    .wordlists {
-            list-style-type:none;
-    }
-    .wordlists li {
-            display:inline-block;
-              padding:4px 8px;
-              margin:5px 5px;
-              background-color:white;
-              border-radius:5px;
-              cursor:pointer;
-              border:1px solid whitesmoke;
-    }
-
-    .wordlists li:hover {
-          background-color:deepskyblue;
-    }
-
-    .wordlists li:active {
-          -webkit-transform:scale(1.05);
-    }
-
-    footer {font-size:60px;color:white;text-align:center;font-family: fantasy}
-    footer a {color:white;}
-
-    footer .nt {display:block;font-size:12px;}
-
-    #titre{
-        padding-left: 7px;
-    }
-
-
-
-
-</style>
 </html>
-![piglatin.png](piglatin.png)
+```
+
+Question 4: Create a website with Javascript that when the user enters a text in an input element, the text is shown on the website’s body as a div with the text on it, resembling a postit note: Something like that:
+
+```.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MessageShow</title>
+    <script>
+        function sender() {
+
+            var input = document.querySelector("#name")
+            var display = document.querySelector("#yellow-box")
+            display.innerHTML=input.value;
+        }
+    </script>
+
+<style>
+    .boxed{
+        background-color: yellow;
+        border: 2px solid black;
+        width:400px;
+        height:350px;
+        position: absolute;
+        margin:60px;
+        margin-right: -30px;
+        padding: 20px;
+    }
+    .boxed span{
+        margin: 10px;
+        margin-bottom: 5px;
+        padding:20px;
+        font-size: x-large;
+        font-family: cursive;
+    }
+</style>
+</head>
+<body>
+    <h1>Sender Website's body</h1>
+
+    <p>Write down a message:</p>
+    <input type="text" id="name">
+    <button type="button" onclick="sender()">Click here!</button>
+    <p>The box below shows your text: </p>
+    <p id="showText"></p>
+
+
+    <div class="boxed" id="yellow-box">
+        <span>Once you clicked, your text gonna show up here!</span>
+    </div>
+
+</body>
+</html>
+```
